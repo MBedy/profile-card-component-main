@@ -1,0 +1,127 @@
+:root {
+  --color-dark-cyan: hsl(185, 75%, 39%);
+  --color-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --color-dark-greyish-blue: hsl(227, 10%, 46%);
+  --color-dark-grey: hsl(0, 0%, 59%);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+  background-color: var(--color-dark-cyan);
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+body:before,
+body:after {
+  position: absolute;
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background-size: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+body:before {
+  top: 0;
+  left: 0;
+  background: url("/images/bg-pattern-top.svg") no-repeat bottom right;
+}
+body:after {
+  top: 100%;
+  left: 100%;
+  background: url("/images/bg-pattern-bottom.svg") no-repeat top left;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: white;
+  max-width: 360px;
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 4rem 4rem -2rem var(--color-dark-cyan);
+}
+.card .card__bg-image {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  height: 140px;
+  width: 100%;
+}
+.card .avatar {
+  display: block;
+  border: 0.3rem solid white;
+  border-radius: 50%;
+  margin: -60px auto 0;
+  position: relative;
+  z-index: 1;
+}
+
+.bio {
+  text-align: center;
+}
+
+.dark-blue {
+  color: var(--color-very-dark-desaturated-blue);
+}
+
+.gray {
+  color: var(--color-dark-grey);
+}
+
+.divider {
+  background-color: var(--color-dark-grey);
+  height: 0.5px;
+  width: 100%;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 26px 18px;
+}
+.stats .stat {
+  text-align: center;
+}
+.stats .stat .number {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.stats .stat .category {
+  font-size: 10px;
+}
+
+footer {
+  font-size: 11px;
+  text-align: center;
+  margin: 50px 0;
+}
+footer a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=style.css.map */
